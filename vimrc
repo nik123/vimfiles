@@ -5,10 +5,13 @@
 " Opening at the bottom and right is more comfortable
 set splitbelow splitright
 
-" Use spaces instead of tabs
-set expandtab
-" To make expandtab work shiftwidth and softtabstop
-" should be set to the same value
-" Source: https://vim.fandom.com/wiki/Indenting_source_code
-set shiftwidth=4
-set softtabstop=4
+" Enable file type detection
+:filetype on
+" Enable loading the indent file
+" For specific file types
+:filetype indent on
+
+" Use spaces insted tabs in python files:
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+" Make "tab" to be 4 spaces instead 8 (which is default value):
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
