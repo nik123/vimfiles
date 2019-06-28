@@ -15,3 +15,6 @@ set splitbelow splitright
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 " Make "tab" to be 4 spaces instead 8 (which is default value):
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+
+" Better tab support
+set smarttab
