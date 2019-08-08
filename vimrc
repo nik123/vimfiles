@@ -43,5 +43,5 @@ set autoread
 
 " Allow to change buffers without saving
 " WARNING:
-" When this option enalbed think twice when using ":q!" or ":qa!".
+" When this option enalbed think twice before using ":q!" or ":qa!".
 set hidden
