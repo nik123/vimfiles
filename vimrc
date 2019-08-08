@@ -34,3 +34,14 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 set langmap+=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ
 set langmap+=фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set langmap+=ЖжЭэХхЪъ;\:\;\"\'{[}]
+
+" Always show status line even if single file is opened
+set laststatus=2
+
+" Automatically load changes from disk if there are no changes in buffer:
+set autoread
+
+" Allow to change buffers without saving
+" WARNING:
+" When this option enalbed think twice when using ":q!" or ":qa!".
+set hidden
