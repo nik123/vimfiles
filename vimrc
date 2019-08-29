@@ -48,7 +48,6 @@ set hidden
 
 " Search:
 " If pattern contains an uppercase letter, it is case sensitive, otherwise, it is not.
-" For example, /The would find only "The", while /the would find
 " NOTE: it doesn't apply to search via '*'
 set ignorecase
 set smartcase
