@@ -51,3 +51,11 @@ set hidden
 " NOTE: it doesn't apply to search via '*'
 set ignorecase
 set smartcase
+
+# Highlight current line in editor
+# Disable highlighting when window becomes inactive
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
