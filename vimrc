@@ -52,8 +52,8 @@ set hidden
 set ignorecase
 set smartcase
 
-# Highlight current line in editor
-# Disable highlighting when window becomes inactive
+" Highlight current line in editor
+" Disable highlighting when window becomes inactive
 augroup CursorLine
   au!
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
