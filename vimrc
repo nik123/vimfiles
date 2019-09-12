@@ -62,3 +62,9 @@ augroup END
 
 " Always show one line above and below the cursor
 set scrolloff=1
+
+" Plugins:
+" Plugin manager: https://github.com/junegunn/vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+cal plug#end()
