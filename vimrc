@@ -46,9 +46,8 @@ set autoread
 " When this option enalbed think twice before using ":q!" or ":qa!".
 set hidden
 
-" Search:
-" If pattern contains an uppercase letter, it is case sensitive, otherwise, it is not.
-" NOTE: it doesn't apply to search via '*'
+" If search pattern contains an uppercase letter, it is case sensitive,
+" otherwise, it is not. NOTE: it doesn't apply to search via '*'
 set ignorecase
 set smartcase
 
