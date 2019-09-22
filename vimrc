@@ -62,6 +62,10 @@ augroup END
 " Always show one line above and below the cursor
 set scrolloff=1
 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
 " Plugin manager: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
