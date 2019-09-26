@@ -15,9 +15,9 @@ set splitbelow splitright
 :filetype indent on
 
 " Use spaces insted tabs in python files:
-au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufRead,BufNewFile *.py,*.pyw setlocal expandtab
 " Make "tab" to be 4 spaces instead 8 (which is default value):
-au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*pyw setlocal shiftwidth=4
 
 " Better tab support
 set smarttab
