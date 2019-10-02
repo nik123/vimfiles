@@ -36,6 +36,8 @@ highlight BadWhitespace ctermbg=red guibg=red
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 " Make trailing whitespace be flagged as bad.
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
+" Automatically remove trailing spaces before save
+au BufWritePre *.py,*.pyw  %s/\s\+$//e
 
 " Support cyrillic layout in normal mode
 set langmap+=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ
