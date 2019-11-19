@@ -23,7 +23,6 @@ au BufRead,BufNewFile *.py,*pyw setlocal shiftwidth=4
 au BufRead,BufNewFile *.yaml setlocal expandtab
 " Make "tab" to be 2 spaces instead 8 (which is default value):
 au BufRead,BufNewFile *.yaml setlocal shiftwidth=2
-au BufRead,BufNewFile *.yaml setlocal shiftwidth=2
 au BufRead,BufNewFile *.yaml setlocal tabstop=2
 
 " Better tab support
