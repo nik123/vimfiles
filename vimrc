@@ -17,7 +17,8 @@ set splitbelow splitright
 " Use spaces insted tabs in python files:
 au BufRead,BufNewFile *.py,*.pyw setlocal expandtab
 " Make "tab" to be 4 spaces instead 8 (which is default value):
-au BufRead,BufNewFile *.py,*pyw setlocal shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw setlocal shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw setlocal colorcolumn=80
 
 " Use spaces insted tabs in yaml files:
 au BufRead,BufNewFile *.yaml setlocal expandtab
