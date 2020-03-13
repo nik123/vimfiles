@@ -68,8 +68,8 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
-" Always show one line above and below the cursor
-set scrolloff=1
+" Always show 2 lines above and below the cursor
+set scrolloff=2
 
 " Plugin manager: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
