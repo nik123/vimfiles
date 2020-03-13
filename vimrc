@@ -71,6 +71,9 @@ augroup END
 " Always show 2 lines above and below the cursor
 set scrolloff=2
 
+" Command-line completion in enhanced mode, i.e. show possible matches
+set wildmenu
+
 " Plugin manager: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
