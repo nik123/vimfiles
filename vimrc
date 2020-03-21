@@ -63,6 +63,9 @@ set hidden
 set ignorecase
 set smartcase
 
+" Search and replace word under cursor by "\s":
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 " Highlight current line in editor
 " Disable highlighting when window becomes inactive
 augroup CursorLine
