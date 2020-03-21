@@ -18,7 +18,10 @@ set splitbelow splitright
 au BufRead,BufNewFile *.py,*.pyw setlocal expandtab
 " Make "tab" to be 4 spaces instead 8 (which is default value):
 au BufRead,BufNewFile *.py,*.pyw setlocal shiftwidth=4
-au BufRead,BufNewFile *.py,*.pyw setlocal colorcolumn=80
+" PEP-8 line width (79 characters) is really too short
+" Black python code formatter uses line width 88
+" Seems like better choice to me
+au BufRead,BufNewFile *.py,*.pyw setlocal colorcolumn=88
 
 " Use spaces insted tabs in yaml files:
 au BufRead,BufNewFile *.yaml setlocal expandtab
