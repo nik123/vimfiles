@@ -21,7 +21,7 @@ au BufRead,BufNewFile *.py,*.pyw setlocal shiftwidth=4
 " PEP-8 line width (79 characters) is really too short
 " Black python code formatter uses line width 88
 " Seems like better choice to me
-au BufRead,BufNewFile *.py,*.pyw setlocal colorcolumn=88
+au BufRead,BufNewFile,BufEnter *.py,*.pyw setlocal colorcolumn=88
 
 " Use spaces insted tabs in yaml files:
 au BufRead,BufNewFile *.yaml setlocal expandtab
