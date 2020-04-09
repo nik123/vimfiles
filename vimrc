@@ -69,9 +69,9 @@ set smartcase
 " Highlight current line in editor
 " Disable highlighting when window becomes inactive
 augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-  au WinLeave * setlocal nocursorline
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+	au WinLeave * setlocal nocursorline
 augroup END
 
 " Always show 2 lines above and below the cursor
@@ -84,4 +84,11 @@ set wildmenu
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dense-analysis/ale'
 cal plug#end()
+
+" Check Python files with flake8
+let g:ale_linters = {
+\    'python': ['flake8', 'pydocstyle'],
+\}
+let g:ale_lint_on_save = 1
