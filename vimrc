@@ -89,6 +89,6 @@ cal plug#end()
 
 " Check Python files with flake8
 let g:ale_linters = {
-\    'python': ['flake8', 'pydocstyle'],
+\    'python': ['flake8'],
 \}
 let g:ale_lint_on_save = 1
