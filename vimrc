@@ -85,6 +85,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
+Plug 'junegunn/seoul256.vim'
 cal plug#end()
 
 " Check Python files with flake8
@@ -94,3 +95,6 @@ let g:ale_linters = {
 let g:ale_lint_on_save = 1
 
 let g:ale_fixers = {'python':['black']}
+
+" Unified color scheme (default: dark)
+colo seoul256
