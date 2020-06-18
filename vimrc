@@ -74,8 +74,8 @@ augroup CursorLine
 	au WinLeave * setlocal nocursorline
 augroup END
 
-" Always show 2 lines above and below the cursor
-set scrolloff=2
+" Always show 3 lines above and below the cursor
+set scrolloff=3
 
 " Command-line completion in enhanced mode, i.e. show possible matches
 set wildmenu
