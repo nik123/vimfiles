@@ -103,7 +103,7 @@ function! PlugLoaded(name)
 		\ stridx(&rtp, g:plugs[a:name].dir) >= 0)
 endfunction
 
-" Unified color scheme (default: dark)
 if PlugLoaded('seoul256.vim')
+	" Unified color scheme (default: dark)
 	colo seoul256
 endif
