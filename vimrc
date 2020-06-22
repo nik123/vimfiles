@@ -96,5 +96,14 @@ let g:ale_lint_on_save = 1
 
 let g:ale_fixers = {'python':['black']}
 
+function! PlugLoaded(name)
+	return (
+		\ has_key(g:plugs, a:name) &&
+		\ isdirectory(g:plugs[a:name].dir) &&
+		\ stridx(&rtp, g:plugs[a:name].dir) >= 0)
+endfunction
+
 " Unified color scheme (default: dark)
-colo seoul256
+if PlugLoaded('seoul256.vim')
+	colo seoul256
+endif
