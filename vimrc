@@ -86,7 +86,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
-cal plug#end()
+Plug 'davidhalter/jedi-vim'
+call plug#end()
 
 " Check Python files with flake8
 let g:ale_linters = {
@@ -106,4 +107,14 @@ endfunction
 if PlugLoaded('seoul256.vim')
 	" Unified color scheme (default: dark)
 	colo seoul256
+endif
+
+if PlugLoaded('jedi-vim')
+	" I don't want the docstring window to popup during completion
+	autocmd FileType python setlocal completeopt-=preview
+	" Show call signatures not in buffer but in VIM command line
+	let g:jedi#show_call_signatures = "2"
+	" Do not show current mode in VIM command line
+	" Otherwise previous setting is useless
+	set noshowmode
 endif
