@@ -43,9 +43,13 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 au BufWritePre *.py,*.pyw  %s/\s\+$//e
 
 " Support cyrillic layout in normal mode
-set langmap+=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ
-set langmap+=фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-set langmap+=ЖжЭэХхЪъ;\:\;\"\'{[}]
+" encoding check added for systems which do not have
+" cyrillic support installed (for example most of docker containers)
+if &encoding ==# "utf-8"
+	set langmap+=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ
+	set langmap+=фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+	set langmap+=ЖжЭэХхЪъ;\:\;\"\'{[}]
+endif
 
 " Always show status line even if single file is opened
 set laststatus=2
