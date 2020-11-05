@@ -1,8 +1,13 @@
 " Enable syntax highlighting
 syntax on
 
-" Show line numbers
-:set number
+" Line numbers
+set number
+augroup RelNumber
+	au!
+	au VimEnter,WinEnter,BufWinEnter * setlocal relativenumber
+	au WinLeave * setlocal norelativenumber
+augroup END
 
 " By default split opens at the top and at the bottom
 " Opening at the bottom and right is more comfortable
