@@ -127,3 +127,6 @@ if PlugLoaded('jedi-vim')
 	" Otherwise previous setting is useless
 	set noshowmode
 endif
+
+" This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
