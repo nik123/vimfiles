@@ -68,12 +68,10 @@ set autoread
 set hidden
 
 " If search pattern contains an uppercase letter, it is case sensitive,
-" otherwise, it is not. NOTE: it doesn't apply to search via '*'
+" otherwise, it is not.
+" NOTE: it doesn't apply to search via '*'
 set ignorecase
 set smartcase
-
-" Search and replace word under cursor by "\s":
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " Highlight current line in editor
 " Disable highlighting when window becomes inactive
