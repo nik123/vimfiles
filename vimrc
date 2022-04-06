@@ -94,6 +94,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " Check Python files with flake8
