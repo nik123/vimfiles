@@ -95,6 +95,15 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'hashivim/vim-terraform'
+
+" nvim-telescope
+if has('nvim')
+	" Latest telescope version requires vim 0.7.0+.
+	" None of my machines has it installed.
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': 'nvim-0.6' }
+endif
+
 call plug#end()
 
 " Check Python files with flake8
@@ -125,6 +134,10 @@ if PlugLoaded('jedi-vim')
 	" Do not show current mode in VIM command line
 	" Otherwise previous setting is useless
 	set noshowmode
+endif
+
+if PlugLoaded('telescope.nvim')
+	nnoremap <leader>ff <cmd>Telescope find_files<cr>
 endif
 
 " This unsets the "last search pattern" register by hitting return
