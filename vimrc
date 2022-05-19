@@ -137,7 +137,9 @@ if PlugLoaded('jedi-vim')
 endif
 
 if PlugLoaded('telescope.nvim')
-	nnoremap <leader>ff <cmd>Telescope find_files<cr>
+	nnoremap <leader>ff :lua require("telescope.builtin").find_files()<CR>
+	nnoremap <leader>fb :lua require("telescope.builtin").buffers()<CR>
+	nnoremap <leader>fh :lua require("telescope.builtin").find_files({hidden=true})<CR>
 endif
 
 " This unsets the "last search pattern" register by hitting return
