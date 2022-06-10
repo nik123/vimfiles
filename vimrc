@@ -99,7 +99,7 @@ Plug 'hashivim/vim-terraform'
 " nvim-telescope
 if has('nvim')
 	" Latest telescope version requires vim 0.7.0+.
-	" None of my machines has it installed.
+	" Not all of my machines have it installed.
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': 'nvim-0.6' }
 endif
