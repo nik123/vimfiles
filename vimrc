@@ -103,6 +103,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-commentary'
 
 " nvim-telescope
+" Some shortcuts for telescope window:
+" <C-x> - Go to file selection as a split
+" <C-v> - Go to file selection as a vsplit
 if has('nvim')
 	" Latest telescope version requires vim 0.7.0+.
 	" Not all of my machines have it installed.
