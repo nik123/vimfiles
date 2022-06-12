@@ -96,6 +96,12 @@ Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'hashivim/vim-terraform'
 
+" gcc - to comment a line (takes a count)
+" gcap - to comment a paragraph
+" gc in visual mode to comment selection
+" gcgc - uncomment a set of adjacent commented lines
+Plug 'tpope/vim-commentary'
+
 " nvim-telescope
 if has('nvim')
 	" Latest telescope version requires vim 0.7.0+.
