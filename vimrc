@@ -153,3 +153,6 @@ endif
 
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+
+" Shortcut to open my vim config a little bit faster
+command! Vimrc e ~/.vim/vimrc
