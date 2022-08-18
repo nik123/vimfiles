@@ -154,5 +154,8 @@ endif
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
+" Enable syntax folding in the window:
+nnoremap <leader>fs :setlocal foldmethod=syntax<CR>
+
 " Shortcut to open my vim config a little bit faster
 command! Vimrc e ~/.vim/vimrc
