@@ -159,3 +159,6 @@ nnoremap <leader>fs :setlocal foldmethod=syntax<CR>
 
 " Shortcut to open my vim config a little bit faster
 command! Vimrc e ~/.vim/vimrc
+
+" Trim trailing whitespaces in current buffer:
+nnoremap <leader>tw :%s/\s\+$//e<CR>
