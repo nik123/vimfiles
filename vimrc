@@ -28,12 +28,6 @@ au BufRead,BufNewFile *.py,*.pyw setlocal shiftwidth=4
 " Seems like better choice to me
 au BufRead,BufNewFile,BufEnter *.py,*.pyw setlocal colorcolumn=88
 
-" Use spaces insted tabs in yaml files:
-au BufRead,BufNewFile *.yaml setlocal expandtab
-" Make "tab" to be 2 spaces instead 8 (which is default value):
-au BufRead,BufNewFile *.yaml setlocal shiftwidth=2
-au BufRead,BufNewFile *.yaml setlocal tabstop=2
-
 " Better tab support
 set smarttab
 
@@ -96,6 +90,10 @@ Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'hashivim/vim-terraform'
 
+" braceless.vim for better yaml support (mostly folding)
+" E.g. default vim yaml folding doesn't include begining of the yaml section
+Plug 'tweekmonster/braceless.vim'
+
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
 " gc in visual mode to comment selection
@@ -146,9 +144,16 @@ if PlugLoaded('jedi-vim')
 endif
 
 if PlugLoaded('telescope.nvim')
+	" Search through the files in the working dir
 	nnoremap <leader>ff :lua require("telescope.builtin").find_files()<CR>
+	" Search through the git-controlled files
+	nnoremap <leader>gf :lua require("telescope.builtin").git_files()<CR>
 	nnoremap <leader>fb :lua require("telescope.builtin").buffers()<CR>
 	nnoremap <leader>fh :lua require("telescope.builtin").find_files({hidden=true})<CR>
+endif
+
+if PlugLoaded('braceless.vim')
+	autocmd FileType yaml BracelessEnable +indent +fold +highlight
 endif
 
 " This unsets the "last search pattern" register by hitting return
