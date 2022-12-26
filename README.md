@@ -2,4 +2,4 @@
 
 My VIM configuration.
 
-To apply it in Neovim, see `:help nvim-to-vim`.
+To apply it in Neovim, see `:help nvim-from-vim`.
