@@ -104,11 +104,14 @@ Plug 'tpope/vim-commentary'
 " Some shortcuts for telescope window:
 " <C-x> - Go to file selection as a split
 " <C-v> - Go to file selection as a vsplit
-if has('nvim')
+if has('nvim-0.7')
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
+elseif has('nvim')
 	" Latest telescope version requires vim 0.7.0+.
 	" Not all of my machines have it installed.
 	Plug 'nvim-lua/plenary.nvim'
-	Plug 'nvim-telescope/telescope.nvim', { 'tag': 'nvim-0.6' }
+	Plug 'nvim-telescope/telescope.nvim', { 'tag': 'nvim-0.1' }
 endif
 
 call plug#end()
