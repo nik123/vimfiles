@@ -155,9 +155,10 @@ if PlugLoaded('telescope.nvim')
 	nnoremap <leader>fh :lua require("telescope.builtin").find_files({hidden=true})<CR>
 endif
 
-if PlugLoaded('braceless.vim')
-	autocmd FileType yaml BracelessEnable +indent +fold +highlight
-endif
+" if PlugLoaded('braceless.vim')
+autocmd FileType yaml BracelessEnable +indent +fold +highlight
+autocmd FileType python BracelessEnable +indent +fold +highlight
+" endif
 
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
@@ -170,3 +171,10 @@ command! Vimrc e ~/.vim/vimrc
 
 " Trim trailing whitespaces in current buffer:
 nnoremap <leader>tw :%s/\s\+$//e<CR>
+
+if has('nvim')
+	" tev == Terminal Emulator Vertically
+	nnoremap <leader>tev :vsp term://bash<CR>
+	" tev == Terminal Emulator Horizontally
+	nnoremap <leader>teh :sp term://bash<CR>
+endif
