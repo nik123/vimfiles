@@ -88,7 +88,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
-Plug 'hashivim/vim-terraform'
 
 " braceless.vim for better yaml support (mostly folding)
 " E.g. default vim yaml folding doesn't include begining of the yaml section
