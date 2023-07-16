@@ -149,9 +149,11 @@ if PlugLoaded('telescope.nvim')
 	" Search through the files in the working dir
 	nnoremap <leader>ff :lua require("telescope.builtin").find_files()<CR>
 	" Search through the git-controlled files
-	nnoremap <leader>gf :lua require("telescope.builtin").git_files()<CR>
+	nnoremap <leader>fg :lua require("telescope.builtin").git_files()<CR>
 	nnoremap <leader>fb :lua require("telescope.builtin").buffers()<CR>
 	nnoremap <leader>fh :lua require("telescope.builtin").find_files({hidden=true})<CR>
+	" Search for a str in the files (requires ripgrep)
+	nnoremap <leader>fs :lua require("telescope.builtin").live_grep()<CR>
 endif
 
 " if PlugLoaded('braceless.vim')
@@ -161,9 +163,6 @@ autocmd FileType python BracelessEnable +indent +fold +highlight
 
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
-
-" Enable syntax folding in the window:
-nnoremap <leader>fs :setlocal foldmethod=syntax<CR>
 
 " Shortcut to open my vim config a little bit faster
 command! Vimrc e ~/.vim/vimrc
