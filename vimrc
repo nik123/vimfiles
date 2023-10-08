@@ -89,10 +89,6 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 
-" braceless.vim for better yaml support (mostly folding)
-" E.g. default vim yaml folding doesn't include begining of the yaml section
-Plug 'tweekmonster/braceless.vim'
-
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
 " gc in visual mode to comment selection
@@ -155,11 +151,6 @@ if PlugLoaded('telescope.nvim')
 	" Search for a str in the files (requires ripgrep)
 	nnoremap <leader>fs :lua require("telescope.builtin").live_grep()<CR>
 endif
-
-" if PlugLoaded('braceless.vim')
-autocmd FileType yaml BracelessEnable +indent +fold +highlight
-autocmd FileType python BracelessEnable +indent +fold +highlight
-" endif
 
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
