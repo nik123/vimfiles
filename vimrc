@@ -83,17 +83,17 @@ set wildmenu
 
 " Plugin manager: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'dense-analysis/ale'
+" Plug 'vim-airline/vim-airline'
+" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
 " gc in visual mode to comment selection
 " gcgc - uncomment a set of adjacent commented lines
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
 
 " nvim-telescope
 " Some shortcuts for telescope window:
@@ -120,15 +120,18 @@ let g:ale_lint_on_save = 1
 let g:ale_fixers = {'python':['black']}
 
 function! PlugLoaded(name)
-	return (
-		\ has_key(g:plugs, a:name) &&
-		\ isdirectory(g:plugs[a:name].dir) &&
-		\ stridx(&rtp, g:plugs[a:name].dir) >= 0)
+	if !(has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir))
+		return 0
+	endif
+
+	" Trim '/' at the end of the string:
+	let plug_dir = substitute(g:plugs[a:name].dir, '/$', '', '')
+	return stridx(&rtp, plug_dir) >= 0
 endfunction
 
 if PlugLoaded('seoul256.vim')
 	" Unified color scheme (default: dark)
-	colo seoul256
+ 	colo seoul256
 endif
 
 if PlugLoaded('jedi-vim')
