@@ -83,17 +83,17 @@ set wildmenu
 
 " Plugin manager: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
-" Plug 'vim-airline/vim-airline'
-" Plug 'christoomey/vim-tmux-navigator'
-" Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
-" Plug 'davidhalter/jedi-vim'
+Plug 'davidhalter/jedi-vim'
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
 " gc in visual mode to comment selection
 " gcgc - uncomment a set of adjacent commented lines
-" Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " nvim-telescope
 " Some shortcuts for telescope window:
@@ -131,7 +131,7 @@ endfunction
 
 if PlugLoaded('seoul256.vim')
 	" Unified color scheme (default: dark)
- 	colo seoul256
+	colo seoul256
 endif
 
 if PlugLoaded('jedi-vim')
