@@ -120,10 +120,13 @@ let g:ale_lint_on_save = 1
 let g:ale_fixers = {'python':['black']}
 
 function! PlugLoaded(name)
-	return (
-		\ has_key(g:plugs, a:name) &&
-		\ isdirectory(g:plugs[a:name].dir) &&
-		\ stridx(&rtp, g:plugs[a:name].dir) >= 0)
+	if !(has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir))
+		return 0
+	endif
+
+	" Trim '/' at the end of the string:
+	let plug_dir = substitute(g:plugs[a:name].dir, '/$', '', '')
+	return stridx(&rtp, plug_dir) >= 0
 endfunction
 
 if PlugLoaded('seoul256.vim')
