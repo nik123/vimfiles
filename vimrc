@@ -88,6 +88,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
