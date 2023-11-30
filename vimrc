@@ -89,6 +89,7 @@ Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+Plug 'tmhedberg/SimpylFold'
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
@@ -171,3 +172,9 @@ if has('nvim')
 	" tev == Terminal Emulator Horizontally
 	nnoremap <leader>teh :sp term://bash<CR>
 endif
+
+
+" Special setting for simply-fold plugin
+" When openning a new buffer all folds are closed
+" I want it to be opened by default
+set foldlevelstart=99
