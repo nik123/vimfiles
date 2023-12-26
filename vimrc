@@ -167,10 +167,10 @@ command! Vimrc e ~/.vim/vimrc
 nnoremap <leader>tw :%s/\s\+$//e<CR>
 
 if has('nvim')
-	" tev == Terminal Emulator Vertically
-	nnoremap <leader>tev :vsp term://bash<CR>
-	" tev == Terminal Emulator Horizontally
-	nnoremap <leader>teh :sp term://bash<CR>
+	" Open terminal in a vertical split
+	nnoremap <leader>tev :vsp term://$SHELL<CR>
+	" Open terminal in a horizontal split
+	nnoremap <leader>teh :sp term://$SHELL<CR>
 endif
 
 
