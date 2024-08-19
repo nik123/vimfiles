@@ -90,6 +90,8 @@ Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'tmhedberg/SimpylFold'
+Plug 'willothy/flatten.nvim'
+Plug 'lambdalisue/vim-suda'
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
