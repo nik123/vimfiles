@@ -88,10 +88,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/seoul256.vim'
 Plug 'davidhalter/jedi-vim'
-Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+" Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'tmhedberg/SimpylFold'
 Plug 'willothy/flatten.nvim'
 Plug 'lambdalisue/vim-suda'
+Plug 'joshdick/onedark.vim'
 
 " gcc - to comment a line (takes a count)
 " gcap - to comment a paragraph
@@ -133,9 +134,13 @@ function! PlugLoaded(name)
 	return stridx(&rtp, plug_dir) >= 0
 endfunction
 
-if PlugLoaded('seoul256.vim')
-	" Unified color scheme (default: dark)
-	colo seoul256
+" if PlugLoaded('seoul256.vim')
+" 	" Unified color scheme (default: dark)
+" 	colo seoul256
+" endif
+set termguicolors
+if PlugLoaded('onedark.vim')
+	colo onedark
 endif
 
 if PlugLoaded('jedi-vim')
